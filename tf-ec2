@@ -9,7 +9,6 @@ resource "aws_instance" "tf-ec2" {
   instance_type = "t2.micro"
 
   tags = {
-    "Name" = "tf-ec2"
+    Name = "tf-ec2"
   }
-  
 }
