@@ -1,0 +1,16 @@
+resource "aws_vpc" "tf-VPC" {
+    cidr_block = "10.0.0.0/16"
+
+    tags = {
+      "Name" = "tf-VPC"
+    }  
+}
+resource "aws_subnet" "tf-subnet" {
+    vpc_id = aws_vpc.tf-VPC.id
+    cidr_block = "10.0.0.0/24"
+
+    tags = {
+      "Name" = "tf-subnet"
+    }
+  
+}
